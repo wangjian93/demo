@@ -1,0 +1,150 @@
+<div class="layui-row layui-col-space15">
+    <div class="layui-col-xs6 layui-col-md3">
+        <div class="layui-card">
+            <div class="layui-card-header">
+                在线人数<span class="layui-badge layui-bg-blue pull-right">当前</span>
+            </div>
+            <div class="layui-card-body">
+                <p class="lay-big-font" th:text="${activeSessions}"></p>
+                <p>总访问量<span class="pull-right"><span th:text="${count}"></span> <i class="layui-icon layui-icon-flag"></i></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs6 layui-col-md3">
+        <div class="layui-card">
+            <div class="layui-card-header">
+                已使用内存<span class="layui-badge layui-bg-black pull-right">内存</span>
+            </div>
+            <div class="layui-card-body">
+                <p class="lay-big-font" th:text="${usedMemory}"></p>
+                <p>总内存<span class="pull-right"><span th:text="${maxMemory}"></span> <i class="layui-icon layui-icon-download-circle"></i></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs6 layui-col-md3">
+        <div class="layui-card">
+            <div class="layui-card-header">
+                活跃连接数<span class="layui-badge layui-bg-green pull-right">连接池</span>
+            </div>
+            <div class="layui-card-body">
+                <p class="lay-big-font" th:text="${activeCount}"></p>
+                <p>池中连接数<span class="pull-right"><span th:text="${poolingCount}"></span> <i class="layui-icon layui-icon-rate"></i></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-xs6 layui-col-md3">
+        <div class="layui-card">
+            <div class="layui-card-header">
+                任务执行数量<span class="layui-badge layui-bg-orange pull-right">定时任务</span>
+            </div>
+            <div class="layui-card-body">
+                <p class="lay-big-font" th:text="${numberOfJobsExecuted}"></p>
+                <p>线程池数量<span class="pull-right"><span th:text="${threadPoolSize}"></span> <i class="layui-icon layui-icon-user"></i></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="layui-row layui-col-space15">
+    <div class="layui-col-lg6 layui-col-md12">
+        <div class="layui-card">
+            <div class="layui-card-header">后台框架</div>
+            <div class="layui-card-body">
+                <table class="layui-table layui-text">
+                    <colgroup>
+                        <col width="100">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>核心框架</td>
+                            <td>Spring、Spring MVC、Spring Boot</td>
+                        </tr>
+                        <tr>
+                            <td>持久层</td>
+                            <td>MyBatis、Druid、<a href="http://mp.baomidou.com" target="_blank">MyBatis-Plus</a></td>
+                        </tr>
+                        <tr>
+                            <td>权限框架</td>
+                            <td>Spring Security、OAuth2.0</td>
+                        </tr>
+                        <!--<tr>-->
+                            <!--<td>Star Fork</td>-->
+                            <!--<td style="padding-bottom: 3px;">-->
+                                <!--<iframe src="http://ghbtns.com/github-btn.html?user=whvcse&amp;repo=easyweb&amp;type=watch&amp;count=true&amp;size=medium"-->
+                                        <!--allowtransparency="true" frameborder="0" scrolling="0" width="100px"-->
+                                        <!--height="20px"></iframe>-->
+                                <!--<iframe src="http://ghbtns.com/github-btn.html?user=whvcse&amp;repo=easyweb&amp;type=fork&amp;count=true&amp;size=medium"-->
+                                        <!--allowtransparency="true" frameborder="0" scrolling="0" width="100px"-->
+                                        <!--height="20px"></iframe>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-lg6 layui-col-md12">
+        <div class="layui-card">
+            <div class="layui-card-header">前端框架</div>
+            <div class="layui-card-body">
+                <table class="layui-table layui-text">
+                    <colgroup>
+                        <col width="100">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>核心框架</td>
+                            <td><a href="http://www.layui.com/" target="_blank">layui-v2.3.0</a></td>
+                        </tr>
+                        <tr>
+                            <td>路由框架</td>
+                            <td><a href="https://github.com/itorr/q.js" target="_blank">q.js</a>（纯js轻量级路由框架）</td>
+                        </tr>
+                        <tr>
+                            <td>mvvm框架</td>
+                            <td><a href="https://gitee.com/pandarrr/pandyle" target="_blank">pandyle.js</a>（专为jquery编写的mvvm库）
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>主要特色</td>
+                            <td>单页面 / 响应式 / 简约 / 极易上手</td>
+                        </tr>
+                        <!--<tr>-->
+                            <!--<td>获取源码</td>-->
+                            <!--<td style="padding-bottom: 0">-->
+                                <!--<div class="layui-btn-container">-->
+                                    <!--<a href="https://gitee.com/whvse/EasyWeb" target="_blank"-->
+                                       <!--class="layui-btn layui-btn-danger">后台代码</a>-->
+                                    <!--<a href="https://gitee.com/whvse/EasyWebPage" target="_blank" class="layui-btn">前端页面</a>-->
+                                <!--</div>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use(['carousel', 'element'], function () {
+        var carousel = layui.carousel;
+        var element = layui.element;
+        var device = layui.device;
+
+        layui.link('assets/css/console.css');
+
+        // 渲染轮播
+        carousel.render({
+            elem: '.layui-carousel',
+            width: '100%',
+            height: '60px',
+            arrow: 'none',
+            autoplay: true,
+            trigger: device.ios || device.android ? 'click' : 'hover',
+            anim: 'fade'
+        });
+    });
+</script>

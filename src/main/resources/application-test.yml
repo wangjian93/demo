@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://10.20.2.9:3306/aab?useUnicode=true&characterEncoding=utf8
+    username: test
+    password: test
+    driver-class-name: com.mysql.jdbc.Driver
+
+  datasource-edw:
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.10.2.233)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=10.10.2.234)(PORT=1521))(LOAD_BALANCE=yes)(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=kabedw)))
+    username: etl
+    password: etl
+    driver-class-name: oracle.jdbc.driver.OracleDriver
